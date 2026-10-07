@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peter Barsoum – Data Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f4ee;--panel:#ffffff;--ink:#25262b;--muted:#5d5f68;--line:#dcd9cf;--accent:#f2b705;--accentink:#25262b;--side:#25262b;--sideink:#f1efe8;--sidemuted:#a9aab2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1e22;--panel:#27282d;--ink:#f1efe8;--muted:#a9aab2;--line:#3a3b42;--side:#16171a}}
+:root[data-theme="dark"]{--bg:#1d1e22;--panel:#27282d;--ink:#f1efe8;--muted:#a9aab2;--line:#3a3b42;--side:#16171a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Raleway,system-ui,sans-serif;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:Comfortaa,Raleway,system-ui,sans-serif;line-height:1.2;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+aside{background:var(--side);color:var(--sideink);padding:56px 36px;position:sticky;top:0;height:100vh;align-self:start;display:flex;flex-direction:column;gap:28px}
+aside h1{font-size:2.3rem;color:var(--accent)}
+aside .role{color:var(--sidemuted);margin:10px 0 0}
+nav{display:flex;flex-direction:column;gap:6px}
+nav a{text-decoration:none;color:var(--sideink);padding:6px 0 6px 14px;border-left:3px solid transparent}
+nav a:hover,nav a.on{border-left-color:var(--accent);color:var(--accent)}
+.contact{margin-top:auto;font-size:.95rem;color:var(--sidemuted);display:flex;flex-direction:column;gap:6px}
+.contact a{color:var(--sideink)}
+main{padding:56px clamp(20px,5vw,72px);max-width:980px}
+section{padding:0 0 64px}
+h2{font-size:1.7rem;margin-bottom:22px}
+h2::after{content:"";display:block;width:44px;height:4px;background:var(--accent);margin-top:12px;border-radius:2px}
+p{max-width:68ch;margin:0 0 14px}
+.muted{color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:20px;padding:0;list-style:none}
+.facts li{font-weight:600}
+.facts span{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.skill{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--accent);padding:16px 18px;border-radius:6px}
+.skill h3{font-size:1.05rem;margin-bottom:6px}
+.skill p{font-size:.95rem;color:var(--muted);margin:0}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:6px;margin-bottom:14px}
+.proj summary{cursor:pointer;list-style:none;padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center}
+.proj summary::-webkit-details-marker{display:none}
+.proj h3{font-size:1.1rem}
+.proj .sub{grid-column:1;color:var(--muted);font-size:.92rem}
+.tag{grid-row:1;grid-column:2;font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--accent);color:var(--accentink);white-space:nowrap}
+.proj[open] summary{border-bottom:1px solid var(--line)}
+.body{padding:16px 20px 20px}
+.body ul{margin:0 0 14px;padding-left:20px}
+.body li{margin-bottom:4px}
+.meta{font-size:.9rem;color:var(--muted);margin:0 0 12px}
+.links a{display:inline-block;margin-right:14px;font-weight:600}
+.links .soon{color:var(--muted);font-weight:500}
+.timeline{border-left:3px solid var(--line);padding-left:22px;margin-left:6px}
+.timeline .item{position:relative;margin-bottom:26px}
+.timeline .item::before{content:"";position:absolute;left:-30px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent)}
+.timeline h3{font-size:1.05rem}
+.timeline .when{color:var(--muted);font-size:.9rem;margin:2px 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);background:var(--panel);padding:4px 12px;border-radius:99px;font-size:.92rem}
+footer{color:var(--muted);font-size:.9rem;padding-bottom:24px}
+@media (max-width:860px){
+ .wrap{grid-template-columns:1fr}
+ aside{position:static;height:auto;padding:36px 22px 28px}
+ nav{flex-direction:row;flex-wrap:wrap;gap:4px 16px}
+ nav a{border-left:0;padding:4px 0;border-bottom:3px solid transparent}
+ nav a:hover,nav a.on{border-bottom-color:var(--accent)}
+ .contact{margin-top:0}
+ main{padding-top:36px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+ <div>
+  <h1>Peter Barsoum</h1>
+  <p class="role">Aspiring data analyst and computer science student in Cairo, Egypt. Open to remote work.</p>
+ </div>
+ <nav aria-label="Sections">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+ </nav>
+ <div class="contact" id="side-contact"></div>
+</aside>
+
+<main>
+<section id="about">
+ <h2>About</h2>
+ <p>I study Computer Science at the Faculty of Computer &amp; Information Sciences and I am building my career in data analysis. In 2026 I completed a 120+ hour data analysis course with the Digital Egyptian Pioneers Initiative, covering cleaning, exploratory analysis, SQL, KPI reporting and dashboards.</p>
+ <p>I like turning messy tables into a clear answer a manager can act on. My current focus is a set of six advanced projects that take one real question each, from retail profitability to country development indicators, through Python, SQL, Tableau and Power BI.</p>
+ <ul class="facts">
+  <li>3.8 / 4.0<span>GPA</span></li>
+  <li>120+ hours<span>Hands-on data analysis training</span></li>
+  <li>ICPC 2026<span>Competitive programming participant</span></li>
+ </ul>
+</section>
+
+<section id="projects">
+ <h2>Projects</h2>
+ <p class="muted">Six projects across the analytics stack. Each one opens to show the business question, what I am building and the tools involved. Repository links appear here as each project is published.</p>
+
+ <details class="proj" open>
+  <summary><h3>Automated sales reporting in Python</h3><span class="tag">In progress</span><span class="sub">Superstore 2019 &middot; Pandas, NumPy, Matplotlib, Seaborn</span></summary>
+  <div class="body">
+   <p>A multinational retailer wants one repeatable workflow that cleans its sales data and produces KPI reports without manual work.</p>
+   <ul>
+    <li>Reusable cleaning pipeline for missing values, outliers, duplicates and inconsistent formats</li>
+    <li>Engineered fields: profit margin, shipping duration, sales performance category</li>
+    <li>Correlation, distribution and trend analysis with at least 8 visualizations</li>
+    <li>Object-oriented, exception-safe code in a documented Jupyter Notebook, exporting clean data and reports automatically</li>
+   </ul>
+   <div class="links" data-proj="python"></div>
+  </div>
+ </details>
+
+ <details class="proj">
+  <summary><h3>Retail data warehouse in SQL</h3><span class="tag">In progress</span><span class="sub">Central Superstore &middot; PostgreSQL / MySQL</span></summary>
+  <div class="body">
+   <p>An operational sales table redesigned into a star schema so executives can track profitability, customer behavior and sales trends.</p>
+   <ul>
+    <li>Fact and dimension tables with primary and foreign keys (5+ tables)</li>
+    <li>15+ queries using joins, subqueries, CTEs and CASE statements</li>
+    <li>Views and a stored procedure for KPI calculation, plus query optimization</li>
+   </ul>
+   <div class="links" data-proj="sql"></div>
+  </div>
+ </details>
+
+ <details class="proj">
+  <summary><h3>Country development story in Tableau</h3><span class="tag">In progress</span><span class="sub">Country Data Comparison &middot; Tableau</span></summary>
+  <div class="body">
+   <p>Interactive dashboards that compare economic, demographic and public health indicators across countries.</p>
+   <ul>
+    <li>Maps, trend views and at least 6 chart types, linked by 3+ dashboard actions</li>
+    <li>Parameters and calculated fields for dynamic comparison</li>
+    <li>A Tableau Story that walks through the patterns, correlations and anomalies I find</li>
+   </ul>
+   <div class="links" data-proj="tableau"></div>
+  </div>
+ </details>
+
+ <details class="proj">
+  <summary><h3>Country indicators dashboard in Power BI</h3><span class="tag">In progress</span><span class="sub">Country Data Comparison &middot; Power BI, DAX, Power Query</span></summary>
+  <div class="body">
+   <p>A multi-page report for monitoring country development, health and population trends.</p>
+   <ul>
+    <li>Power Query (M) cleaning and 10+ DAX measures</li>
+    <li>3+ pages with KPI cards, dynamic titles, drill-through, bookmarks and tooltips</li>
+    <li>Conditional formatting, geographic views and performance tuning</li>
+   </ul>
+   <div class="links" data-proj="pbi1"></div>
+  </div>
+ </details>
+
+ <details class="proj">
+  <summary><h3>Executive BI solution in Power BI</h3><span class="tag">In progress</span><span class="sub">Superstore 2019 &middot; Power BI, star schema, time intelligence</span></summary>
+  <div class="body">
+   <p>An end-to-end reporting solution for senior management covering sales, profit, customers and operations.</p>
+   <ul>
+    <li>Star schema model fed by multiple sources through Power Query</li>
+    <li>12+ DAX measures including time intelligence</li>
+    <li>4+ executive pages, row-level security, refresh strategy and optimization</li>
+   </ul>
+   <div class="links" data-proj="pbi2"></div>
+  </div>
+ </details>
+
+ <details class="proj">
+  <summary><h3>Testing AI in an analyst workflow</h3><span class="tag">In progress</span><span class="sub">Python &middot; Generative AI tools</span></summary>
+  <div class="body">
+   <p>A structured test of where generative AI helps an analyst and where it needs checking.</p>
+   <ul>
+    <li>10+ tested prompts across different prompting strategies for KPI summaries, SQL and Python</li>
+    <li>AI insights compared against my own manual results to measure accuracy, hallucination and bias</li>
+    <li>Written notes on ethics and governance, with AI-generated and manually verified reports side by side</li>
+   </ul>
+   <div class="links" data-proj="ai"></div>
+  </div>
+ </details>
+</section>
+
+<section id="skills">
+ <h2>Skills</h2>
+ <div class="skills">
+  <div class="skill"><h3>Querying and code</h3><p>SQL (PostgreSQL, MySQL), Python (Pandas, NumPy, Matplotlib, Seaborn), C++</p></div>
+  <div class="skill"><h3>BI and spreadsheets</h3><p>Power BI, Tableau, Excel with pivot tables, VLOOKUP and XLOOKUP</p></div>
+  <div class="skill"><h3>Workflow</h3><p>Jupyter Notebook, Git and GitHub</p></div>
+  <div class="skill"><h3>Analysis</h3><p>Data cleaning, EDA, statistical summaries, KPI analysis, data storytelling</p></div>
+ </div>
+</section>
+
+<section id="education">
+ <h2>Education and training</h2>
+ <div class="timeline">
+  <div class="item">
+   <h3>B.Sc. Computer Science</h3>
+   <p class="when">Faculty of Computer &amp; Information Sciences &middot; expected 2028 &middot; GPA 3.8 / 4.0</p>
+   <p>Coursework: Data Analysis &amp; Visualization, Intro to Programming (Python and C++), Data Structures &amp; Algorithms, Discrete Math, Probability &amp; Statistics.</p>
+  </div>
+  <div class="item">
+   <h3>Data Analysis Certificate, Digital Egyptian Pioneers Initiative</h3>
+   <p class="when">Completed 2026 &middot; 120+ practical hours</p>
+   <p>Data cleaning, exploratory analysis, SQL relational querying, business KPIs and executive dashboards.</p>
+  </div>
+  <div class="item">
+   <h3>ICPC 2026</h3>
+   <p class="when">International Collegiate Programming Contest &middot; participant</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Contact</h2>
+ <p>I am looking for an entry-level data analyst role or internship, remote or in Cairo.</p>
+ <ul class="chips" id="main-contact"></ul>
+</section>
+<footer>&copy; 2026 Peter Barsoum</footer>
+</main>
+</div>
+
+<script>
+/* Fill these in. Anything left empty is hidden, so the page never shows placeholder text. */
+var PROFILE = {
+  email: "",
+  phone: "",
+  github: "",    // e.g. "https://github.com/yourname"
+  linkedin: ""   // e.g. "https://www.linkedin.com/in/yourname"
+};
+var PROJECT_LINKS = { python:"", sql:"", tableau:"", pbi1:"", pbi2:"", ai:"" };
+
+(function(){
+  var items = [];
+  if (PROFILE.email) items.push(["Email", "mailto:" + PROFILE.email, PROFILE.email]);
+  if (PROFILE.linkedin) items.push(["LinkedIn", PROFILE.linkedin, "LinkedIn"]);
+  if (PROFILE.github) items.push(["GitHub", PROFILE.github, "GitHub"]);
+  if (PROFILE.phone) items.push(["Phone", "tel:" + PROFILE.phone, PROFILE.phone]);
+  var side = document.getElementById("side-contact"), main = document.getElementById("main-contact");
+  side.textContent = "Cairo, Egypt";
+  items.forEach(function(i){
+    var a = document.createElement("a"); a.href = i[1]; a.textContent = i[2];
+    if (i[1].indexOf("http") === 0) { a.target = "_blank"; a.rel = "noopener"; }
+    var d = document.createElement("div"); d.appendChild(a); side.appendChild(d);
+    var li = document.createElement("li"), b = a.cloneNode(true); li.appendChild(b); main.appendChild(li);
+  });
+  if (!items.length) main.parentNode.removeChild(main);
+  document.querySelectorAll("[data-proj]").forEach(function(el){
+    var u = PROJECT_LINKS[el.getAttribute("data-proj")];
+    if (u) { var a = document.createElement("a"); a.href = u; a.target = "_blank"; a.rel = "noopener"; a.textContent = "View on GitHub"; el.appendChild(a); }
+    else { var s = document.createElement("span"); s.className = "soon"; s.textContent = "Repository will be linked when published."; el.appendChild(s); }
+  });
+  var links = document.querySelectorAll("nav a");
+  var obs = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting) links.forEach(function(l){ l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id); }); });
+  }, {rootMargin:"-30% 0px -60% 0px"});
+  document.querySelectorAll("main section").forEach(function(s){ obs.observe(s); });
+})();
+</script>
+</body>
+</html>
